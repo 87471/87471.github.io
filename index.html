@@ -4,7 +4,7 @@
     <meta content="shitmemes" property="og:title">
     <meta content="the shittiest memes in existence." property="og:description">
     <meta name="google-site-verification" content="d8julPiB4Pf7TRLdhWS1sxgY-4-d61RNc79iiOi4X8M" />
-    <link rel="stylesheet" href="https://shitmemes.github.io/main.css">
+    <link rel="stylesheet" href="https://87471.github.io/main.css">
     <style>
 #idInput {
     border-radius: 25px;
@@ -59,7 +59,7 @@
     if (mode == 4) {
         var id = parseInt(document.getElementById('idInput').value);
         if (id && id >= -vids && id <= imgs || id == 0) {
-            window.location.href = "https://shitmemes.github.io/memes/" + id;
+            window.location.href = "https://87471.github.io/memes/" + id;
         } else {
             console.warn('Invalid ID: ' + id + ' (IDs ' + imgs + ' to ' + vids * -1 + ' are the only IDs allowed!)');
             document.getElementById("idInput").value = "";
@@ -67,7 +67,7 @@
             setTimeout(function() {document.getElementById("something").innerHTML = "Type in ID:";}, 2000)
         }
     } else {
-        window.location.href = "https://shitmemes.github.io/memes/" + rand(mode);
+        window.location.href = "https://87471.github.io/memes/" + rand(mode);
     }
   };
 
@@ -88,7 +88,7 @@
 
 window.onload = function() {
 	function chocolate() {
-  fetch('https://shitmemes.github.io/data.json')
+  fetch('https://87471.github.io/data.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network skill issue');
