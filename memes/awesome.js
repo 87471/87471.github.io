@@ -1,4 +1,4 @@
-fetch('https://shitmemes.github.io/memes.json')
+fetch('https://87471.github.io/memes.json')
   .then(response => {
     // Handle the response
     if (!response.ok) {
@@ -47,7 +47,7 @@ fetch('https://shitmemes.github.io/memes.json')
   var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
-    "<link rel='stylesheet' href='https://shitmemes.github.io/main.css'>" +
+    "<link rel='stylesheet' href='https://87471.github.io/main.css'>" +
     "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
     if (id <= 0) {
     htmlContent += "<meta property='og:video' content='" + directory + "'>" +
@@ -61,15 +61,15 @@ fetch('https://shitmemes.github.io/memes.json')
     if (memeFound === 1) { htmlContent += "(" + id + ") Shitpost Center - " + title + "<br>"; 
 if (id % 1 != 0) {
 	if (id < 0) {
-	htmlContent += "<a href='https://shitmemes.github.io/memes/" + (Math.floor(id) + 1) + "'>Main meme</a>";
+	htmlContent += "<a href='https://87471.github.io/memes/" + (Math.floor(id) + 1) + "'>Main meme</a>";
 	} else {
-	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) + "'>Main meme</a>";
+	htmlContent += "<a href='https://87471.github.io/memes/" + Math.floor(id) + "'>Main meme</a>";
 	}
-	htmlContent += "--- <a href ='https://shitmemes.github.io'>Reroll</a>";
+	htmlContent += "--- <a href ='https://87471.github.io'>Reroll</a>";
 } else if (id < 0) {
-    htmlContent += "<a href='https://shitmemes.github.io/memes/" + (id + 1) + "'>Previous</a> --- <a href='https://shitmemes.github.io'>Reroll</a> --- <a href='https://shitmemes.github.io/memes/" + (id - 1) + "'>Next</a>";
+    htmlContent += "<a href='https://87471.github.io/memes/" + (id + 1) + "'>Previous</a> --- <a href='https://87471.github.io'>Reroll</a> --- <a href='https://87471.github.io/memes/" + (id - 1) + "'>Next</a>";
 } else {
-    htmlContent += "<a href='https://shitmemes.github.io/memes/" + (id - 1) + "'>Previous</a> --- <a href='https://shitmemes.github.io'>Reroll</a> --- <a href='https://shitmemes.github.io/memes/" + (id + 1) + "'>Next</a>";
+    htmlContent += "<a href='https://87471.github.io/memes/" + (id - 1) + "'>Previous</a> --- <a href='https://87471.github.io'>Reroll</a> --- <a href='https://87471.github.io/memes/" + (id + 1) + "'>Next</a>";
 }; } else { htmlContent += "Error! Meme not found!"; };
     // epileptic / offensive warning
     if (epileptic === true || offensive === true) {
@@ -103,12 +103,12 @@ htmlContent += "<div class='sections'>" +
 		note + "<br>" +
     "<a href='https://shitmemes.github.io'>Main page</a>" + "<br>";
     if (mainMeme) {
-		htmlContent += "<a href='https://shitmemes.github.io/memes/" + mainMeme + "'>Main meme</a><br>";
+		htmlContent += "<a href='https://87471.github.io/memes/" + mainMeme + "'>Main meme</a><br>";
 		}
 	  if (submemes) {
 		htmlContent += "<h3>Submemes</h3><br>";
 			for (let i4 = 0; i4 < submemes.length; i4++) {
-				htmlContent += "<a href='https://shitmemes.github.io/memes/" + submemes[i4].id + "'>Submeme " + (i4 + 1) + ": " + submemes[i4].title + "</a><br>";
+				htmlContent += "<a href='https://87471.github.io/memes/" + submemes[i4].id + "'>Submeme " + (i4 + 1) + ": " + submemes[i4].title + "</a><br>";
 			}
 		}
     htmlContent += "</div>" +
