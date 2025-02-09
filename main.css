@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@100;300;400;500;700&display=swap');
 small { font-size: 13px; }
 tiny { font-size: 9px; }
+.highlight {
+	color: #ffdddd;
+}
 .code {
   background-color:#444444;
   color:#ffffff;
