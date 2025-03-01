@@ -94,6 +94,13 @@ a:hover {
   width: 36%;
 }
 
+.sectionMini {
+  width: 50%;
+}
+
+.sectionPlus {
+  width: 200%;
+}
 .nestedSection {
   background-color: #7f44b3;
   border-radius: 11px;
