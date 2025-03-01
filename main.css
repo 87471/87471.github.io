@@ -72,6 +72,11 @@ tiny { font-size: 9px; }
       border-radius: 11px;
       padding: 10px; 
     }
+    .nestedSection {
+      background-color: #7f44b3;
+      border-radius: 11px;
+      padding: 10px; 
+    }
     .sectionTop {
       width: 80%;
       background-color: #5f2096;
