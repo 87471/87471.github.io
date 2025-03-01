@@ -128,6 +128,18 @@ button {
   transition: background-color 0.3s, color 0.3s;
 }
 
+
+input {
+  border-radius: 25px;
+  background-color: #500050;
+  color: #ffffff;
+  padding: 10px 15px;
+  box-shadow: none;
+  border: solid;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 button:hover {
   background-color: #700070;
 }
