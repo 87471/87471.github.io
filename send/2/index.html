@@ -47,10 +47,14 @@
       var params = {
         username: "github.io/send",
         avatar_url: "",
-        content: "Ella, you got a new message!\n>" + string
+        content: "Ella, you got a new message!\n> " + string
       }
-
+      document.getElementById("message").value = "";
+	if (document.getElementById("message").value != "") {
       request.send(JSON.stringify(params));
+	} else {
+		window.alert("Empty message!");
+	};
     }
     setInterval(function() {
 	document.getElementById("currentlength").innerHTML = document.getElementById("message").value.length;
