@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i stole this from stackoverflow</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1345566735725629551/5imj56t29pbmJGrgw9Mqv-hEpxnvjF6axIf8nfIehXanbUnJajCqyO27eFMfyuXHM_Pk");
+
+      request.setRequestHeader('Content-type', 'application/json');
+      var params = {
+        username: "github.io/send",
+        avatar_url: "",
+        content: "<@1307848088882516069>, you got a new message!\n" + "the"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
