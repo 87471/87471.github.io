@@ -138,7 +138,17 @@ input {
   border: solid;
   outline: none;
   transition: background-color 0.3s, color 0.3s;
+  border-style: solid;
+  border-color: #a567db;
+  font-family: Comic Neue;
 }
+textarea {
+      font-family: Comic Neue;
+      background-color: #9a5cd1;
+      color: #ffffff;
+      border-style: solid;
+      border-color: #a567db;
+} 
 
 button:hover {
   background-color: #700070;
