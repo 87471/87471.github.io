@@ -50,7 +50,6 @@
         avatar_url: "",
         content: "Ella, you got a new message!\n\n" + string
       }
-      document.getElementById("message").value = "";
 	cd = 30;
 	if (cd > 0) {
 		window.alert(`cool down buddy you got like ${cd}0 miliseconds left....`);
@@ -59,6 +58,7 @@
 	} else {
 		window.alert("Empty message!");
 	};
+      document.getElementById("message").value = "";
     }
     setInterval(function() {
 	document.getElementById("currentlength").innerHTML = document.getElementById("message").value.length;
