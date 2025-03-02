@@ -107,6 +107,15 @@ a:hover {
   padding: 5px;
 }
 
+
+.seperator {
+  border-style: solid;
+  border-color: #00000000 #00000000 #00000000 #92a8d1;
+  background-color: #b8cdf5;
+  color: #ffffff;
+  padding-left: 10px;
+}
+
 .sectionTop {
   width: 80%;
   background-color: #5f2096;
