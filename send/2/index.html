@@ -18,6 +18,7 @@
     <div class="sections">
       <div class="sectionLeft">
         <small><span id="currentlength"></span>/1500 characters</small><br>
+	Username: <input id="username" maxlength="30"></input><br>
         <textarea id="message" maxlength="1500">hi 65116 :3</textarea><br>
         <button onclick="sendMessage(document.getElementById('message').value)">Send!</button>
       </div>
@@ -39,26 +40,31 @@
 </center>
 </body>
   <script>
-     var cd = 30;
-    function sendMessage(string) {
+     var cd = 300;
+    function sendMessage(string, username) {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/1345566735725629551/5imj56t29pbmJGrgw9Mqv-hEpxnvjF6axIf8nfIehXanbUnJajCqyO27eFMfyuXHM_Pk");
-
+      var user = username;
+      if (user == "") { user = "errmmmm I FORGOR..." };
       request.setRequestHeader('Content-type', 'application/json');
       var params = {
-        username: "github.io/send",
-        avatar_url: "",
-        content: "Ella, you got a new message!\n\n" + string
+	      username: "87471.github.io/send",
+	      avatar_url: "https://i.redd.it/k519vt5twxgb1.jpg",
+ 		 "embeds": [{
+ 		   "title": `From ${user}:`,
+		    "description": string
+		  }]
+		
       }
 	if (cd > 0) {
 		window.alert(`cool down buddy you got like ${cd}0 miliseconds left....`);
-	} else if (document.getElementById("message").value != "") {
+	} else if (string != "") {
       request.send(JSON.stringify(params));
 	} else {
 		window.alert("Empty message!");
 	};
       document.getElementById("message").value = "";
-	cd = 30;
+	cd = 300;
     }
     setInterval(function() {
 	document.getElementById("currentlength").innerHTML = document.getElementById("message").value.length;
