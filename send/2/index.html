@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>i stole this from stackoverflow</title>
-  </head>
-  <body>
-    <button onclick="sendMessage()">Send</button>
-  </body>
-
+<html><head>
+    <title>the 87471th website in existence</title>
+    <meta content="87471's website" property="og:title">
+    <meta content="send her something!" property="og:description">
+    <link rel="stylesheet" href="https://87471.github.io/main.css">
+</head><body>
+<center>
+  <div class="container">
+    <div class="sectionTop">
+      <center>
+        <h2>Send me something!</h2>
+      </center>
+    </div>
+    
+    <div class="sections">
+      <div class="sectionLeft">
+        <small><span id="currentlength"></span>/1500 characters</small>
+        <textarea id="message" maxlength="1500">hi 65116 :3</textarea><br>
+        <button onclick="sendMessage(document.getElementById(message).value)">Send!</button>
+      </div>
+      <div class="sectionRight">
+	<div class="nestedSection">
+	      COLLECT MY PAGES.....<br>
+	</div>
+	<br>
+        <small>
+	<div class="nestedSection">
+		<a href="allpages">ALL THE PAGES....</a><br>
+		<a href="send">draw me / send me something!</a><br>
+        	<a href="yt">My channel!</a><br>
+        	<a href="sm">Shitmemes (merged again! :3)</a><br>
+	</div>
+        <br>
+        </small>
+      </div>
+    </div>
+  </div>
+</center>
+</body>
+  
   <script>
-    function sendMessage() {
+    document.getElementById(currentlength).innerHTML = document.getElementById(message).value.length;
+    function sendMessage(string) {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/1345566735725629551/5imj56t29pbmJGrgw9Mqv-hEpxnvjF6axIf8nfIehXanbUnJajCqyO27eFMfyuXHM_Pk");
 
@@ -18,7 +49,7 @@
       var params = {
         username: "github.io/send",
         avatar_url: "",
-        content: "<@1307848088882516069>, you got a new message!\n" + "the"
+        content: "<@1307848088882516069>, you got a new message!\n" + string
       }
 
       request.send(JSON.stringify(params));
