@@ -2,6 +2,8 @@
 <html>
 	<head>
  	   <title>the 87471th website in existence</title>
+     <style>
+     </style>
  	   <meta content="87471's website" property="og:title">
  	   <meta content="send her something!" property="og:description">
 	    <link rel="stylesheet" href="https://87471.github.io/main.css">
@@ -17,15 +19,16 @@
     
     <div class="sections">
       <div class="sectionLeft">
-        <small><span id="currentlength"></span>/1500 characters</small><br>
-	Username: <input id="username" maxlength="30"></input><br>
-        <textarea id="message" maxlength="1500">hi 65116 :3</textarea><br>
-        <button onclick="sendMessage(document.getElementById('message').value)">Send!</button>
+      	<div class="nestedSection">
+	Username: <input id="username" maxlength="30"></input><br>Message: (<span id="currentlength"></span>/1500 characters)<br>
+         <textarea id="message">hi 65116 :3</textarea><br>
+        <button onclick="sendMessage(document.getElementById('message').value, document.getElementById('username').value)">Send!</button>
       </div>
+	</div>
       <div class="sectionRight">
 	<div class="nestedSection">
 	      COLLECT MY PAGES.....<br>
-	</div>
+  </div>
 	<br>
         <small>
 	<div class="nestedSection">
@@ -64,10 +67,21 @@
 		window.alert("Empty message!");
 	};
       document.getElementById("message").value = "";
+      document.getElementById("username").value = "";
 	cd = 300;
     }
     setInterval(function() {
-	document.getElementById("currentlength").innerHTML = document.getElementById("message").value.length;
+    var size = new Blob([document.getElementById("message").value]).size;
+	document.getElementById("currentlength").innerHTML = size;
+    if (size > 1500) {
+    document.getElementById("currentlength").style.color = "#FF0000";
+    while (size >= 1500) {
+    document.getElementById("message").value = document.getElementById("message").value.slice(0, -2);
+    size = new Blob([document.getElementById("message").value]).size;
+}
+} else {
+    document.getElementById("currentlength").style.color = "#00FF00";
+};
 	cd--;
     }, 10);
   </script>
