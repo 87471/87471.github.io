@@ -39,6 +39,7 @@
 </center>
 </body>
   <script>
+     var cd = 30;
     function sendMessage(string) {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/1345566735725629551/5imj56t29pbmJGrgw9Mqv-hEpxnvjF6axIf8nfIehXanbUnJajCqyO27eFMfyuXHM_Pk");
@@ -50,7 +51,10 @@
         content: "Ella, you got a new message!\n> " + string
       }
       document.getElementById("message").value = "";
-	if (document.getElementById("message").value != "") {
+	cd = 30;
+	if (cd > 0) {
+		window.alert(`cool down buddy you got like ${cd}0 miliseconds left....`);
+	} else if (document.getElementById("message").value != "") {
       request.send(JSON.stringify(params));
 	} else {
 		window.alert("Empty message!");
@@ -58,6 +62,7 @@
     }
     setInterval(function() {
 	document.getElementById("currentlength").innerHTML = document.getElementById("message").value.length;
+	cd--;
     }, 10);
   </script>
 </html>
