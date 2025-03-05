@@ -164,7 +164,8 @@ button:hover {
 }
 
 /* Mobile only */
-@media screen and (max-width: 800px) {
+@media (pointer:none), (pointer:coarse) {
+
   .sections {
     flex-direction: column;
     width: 100%;
@@ -173,7 +174,7 @@ button:hover {
 
   .sectionLeft,
   .sectionRight {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 
