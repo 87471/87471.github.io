@@ -164,7 +164,7 @@ button:hover {
 }
 
 /* Mobile only */
-@media (any-pointer: coarse) {
+@media (hover: none) {
 
   .sections {
     flex-direction: column;
