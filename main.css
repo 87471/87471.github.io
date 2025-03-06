@@ -171,12 +171,12 @@ button:hover {
     flex-direction: column;
     width: 100%;
     padding: 0;
+    margin: auto;
   }
 
   .sectionLeft,
   .sectionRight {
     width: 90%;
-    margin: auto;
   }
 
   .vidbackground video {
