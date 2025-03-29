@@ -20,7 +20,6 @@
     <div class="sections">
       <div class="sectionLeft">
       	<div class="nestedSection">
-		<h3>Unavailable until webhook can be secured!</h3>
 	<div id="cooldown" class="highlight"></div>
 	Username: <input id="username" maxlength="30"></input><br>Message: (<span id="currentlength"></span>/1500 characters)<br>
          <textarea id="message">hi 65116 :3</textarea><br>
@@ -48,7 +47,8 @@
      var cd = 300;
     function sendMessage(string, username) {
       var request = new XMLHttpRequest();
-      request.open("POST", "");
+	   //  thank u molki :3
+      request.open("POST", "https://l.webhook.party/hook/XyVtuhY1xR1PuMUjRgPfGh1qJGZ2rpmTrQlc9a8LUnKWr50T0ubT6%2F2NcC3CUVCiIZlepMS2WlCeNDX8LljgB9ErqeUYUJliWUa2yueSFIQ7bDPTY4vwxEx1N%2FdFUekYc0EE6pVFyS6ySDmig1KaBU1zUrsc2HLvow1qYusVJ2Xk2eMh2akL0yREfqUYzQRiytgve15Rx26W8tZ6KArT8XqsFxA4q80%2BiPrnSDrCPGVJDhQqJAfe%2B6wrUkUpK7EBWC6CNr0kkhzgepLtREUmNpw9eka4bdCp3Jn315n8%2B%2BUcfHFYFz7JCtTlZwd1Cvto0ohS2LwhPNcD3ZZdi71uu7kDd6yG67JBmbbo2eWN7de2ebuqZJOhOEkeBSys9Q8ffJuyHyvMEWE%3D/8e9itSlmhGQkd2Nj");
       var user = username;
       if (user == "") { user = "errmmmm I FORGOR..." };
       request.setRequestHeader('Content-type', 'application/json');
